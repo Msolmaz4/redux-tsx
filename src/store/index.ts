@@ -1,4 +1,5 @@
 import { combineReducers } from "redux" 
+import userReducer from "./reducers/userReducer";
 
 
 //app leri genelde  boyle yapariy
@@ -11,7 +12,7 @@ interface AppState {
 //burada kullanici  category records yapariz
 //tutacagimiz degiskenleri genel olrak reducer
 const rootReducer = combineReducers<AppState>({
-    user:()=>{},
+    user:userReducer,
     categories:()=>{},
     records:()=>{}
 })
