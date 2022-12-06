@@ -16,3 +16,5 @@ const rootReducer = combineReducers<AppState>({
     records:()=>{}
 })
 export default rootReducer
+
+//genel ayarlamalar yyaptiktan saonra genel olan index.tsx gidilip tanitiruz
