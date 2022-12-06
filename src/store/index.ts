@@ -18,3 +18,4 @@ const rootReducer = combineReducers<AppState>({
 export default rootReducer
 
 //genel ayarlamalar yyaptiktan saonra genel olan index.tsx gidilip tanitiruz
+//sonra store bagladik sonra reducer user ts dosyayi aciop devamrediyoeruy
