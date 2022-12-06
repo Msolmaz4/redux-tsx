@@ -4,9 +4,21 @@
 //trpe yaptik burda statet yazariz
 //sonra action geceriz uc asama oliiuur kullanici bilgi alirken start succes error uc asama olir bunu bend etped duyenleriz
 
-import { UserAction, UserState } from "../../types/user"
+import { User, UserAction, UserState } from "../../types/user"
 
-const userReducer = (state:UserState,action:UserAction)=>{
+//sonra bunu yapariz burada data as verek hatayi ortadan kaldiriy 
+//burada bunu userstae esirleriy be her yuklemdifginde bununla baslar
+//sonra insec icinsdeki user gideriz 
+
+const defaultState : UserState = {
+    data:{} as User,
+    loading:false,
+    error:''
+
+}
+
+
+const userReducer = (state:UserState = defaultState,action:UserAction)=>{
     return state
 }
 
