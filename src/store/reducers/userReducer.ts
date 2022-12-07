@@ -9,6 +9,7 @@ import { User, UserAction, UserState } from "../../types/user"
 //sonra bunu yapariz burada data as verek hatayi ortadan kaldiriy 
 //burada bunu userstae esirleriy be her yuklemdifginde bununla baslar
 //sonra insec icinsdeki user gideriz 
+//datayi bos verdik basta yuklenirken bos olsun diye
 
 const defaultState : UserState = {
     data:{} as User,

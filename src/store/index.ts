@@ -1,10 +1,11 @@
 import { combineReducers } from "redux" 
+import { UserState } from "../types/user";
 import userReducer from "./reducers/userReducer";
 
 
 //app leri genelde  boyle yapariy
 interface AppState {
-    user:any;
+    user:UserState;
     categories:any;
     records:any;
 }
