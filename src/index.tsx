@@ -7,6 +7,9 @@ import { applyMiddleware, createStore } from 'redux';
 import rootReducer from './store';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
+//react router hata alirsin dikka tetmesse type kendin yuklueyeceksin
+//
+import {BrowserRouter as Router} from 'react-router-dom'
 
 
 
@@ -17,7 +20,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
 <Provider store={store}>
-<App />
+  <Router>
+  <App />
+  </Router>
+
 </Provider>
  
 
