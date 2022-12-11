@@ -9,7 +9,7 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 //react router hata alirsin dikka tetmesse type kendin yuklueyeceksin
 //
-import {BrowserRouter as Router} from 'react-router-dom'
+
 
 const store =createStore(rootReducer,applyMiddleware(thunk))
 
@@ -18,9 +18,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
 <Provider store={store}>
-  <Router>
+  
   <App />
-  </Router>
+ 
+ 
 
 </Provider>
  
