@@ -13,6 +13,10 @@ import {BrowserRouter as Router} from 'react-router-dom'
 
 
 
+
+
+
+
 const store =createStore(rootReducer,applyMiddleware(thunk))
 
 const root = ReactDOM.createRoot(
