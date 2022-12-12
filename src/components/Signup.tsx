@@ -1,7 +1,7 @@
 import React from 'react'
-import { Button, Form, Input} from 'antd';
+import { Button, Form, Input, message } from 'antd';
 import api from '../utils/api';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const Signup = () => {
@@ -24,21 +24,24 @@ const Signup = () => {
   };
 
 
-  const navi =useNavigate(
+  const navi = useNavigate()
 
-  )
+
+
+
   const onFinish = async (values: any) => {
     try {
-      await api.post('/users/register',values)
+      await api.post('/users/register', values)
       console.log('baglantiyok 111')
       navi('/login')
       console.log('baglantiyok ')
-     
+
     } catch (error) {
-      console.log({error})
-      
+      console.log(error)
+
+
     }
-  
+
   };
 
   return (
@@ -46,8 +49,8 @@ const Signup = () => {
       <Form.Item name='username' label="Name" rules={[{ required: true }]}>
         <Input />
       </Form.Item>
-     
-      <Form.Item name='email' label="Email" rules={[{ type : "email",required:true }]} >
+
+      <Form.Item name='email' label="Email" rules={[{ type: "email", required: true }]} >
         <Input />
       </Form.Item>
       <Form.Item name='full_name' label="FullName">
@@ -56,11 +59,11 @@ const Signup = () => {
       <Form.Item
         label="Password"
         name="password"
-        rules={[{ required: true, message: 'Please input your password!' ,min:6}]}
+        rules={[{ required: true, message: 'Please input your password!', min: 6 }]}
       >
         <Input.Password />
       </Form.Item>
-     
+
       <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
         <Button type="primary" htmlType="submit">
           Submit
