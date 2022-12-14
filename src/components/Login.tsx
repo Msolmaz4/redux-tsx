@@ -44,7 +44,6 @@ const Login: React.FC = () => {
         <Button type="primary" htmlType="submit">
           Submit
         </Button>
-        
       </Form.Item>
     </Form>
   );
