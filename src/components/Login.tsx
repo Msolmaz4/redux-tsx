@@ -1,13 +1,25 @@
 import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
+import api from '../utils/api';
+import {useNavigate} from 'react-router-dom'
 
 const Login: React.FC = () => {
-  const onFinish = (values: any) => {
+   const navi = useNavigate()
+  const onFinish = async (values: any) => {
     console.log('Success:', values);
+    try {
+      await api.post('/users/login' ,values)
+      navi('/')
+    } catch (error) {
+      console.log(error)
+      
+    }
+    
   };
 
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
+
   };
 
   return (

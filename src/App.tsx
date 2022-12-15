@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Signup from './components/Signup';
 
 import { Layout, Menu } from 'antd';
+import Login from './components/Login';
 
 const { Header, Content, Footer } = Layout;
 //layout yaptiktan sonra utils register kayitlari icin api ts dosya yaptik
@@ -34,6 +35,7 @@ function App() {
         <Content className="site-layout" style={{ padding: '50px' }}>
           <Routes>
             <Route path='/register' element={<Signup />} />
+            <Route path='/login' element={<Login/>} />
           </Routes>
 
 
