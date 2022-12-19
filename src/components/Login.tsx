@@ -1,20 +1,20 @@
 import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
 import api from '../utils/api';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Login: React.FC = () => {
-   const navi = useNavigate()
+  const navi = useNavigate()
   const onFinish = async (values: any) => {
     console.log('Success:', values);
     try {
-      await api.post('/users/login' ,values)
+      await api.post('/users/login', values)
       navi('/')
     } catch (error) {
       console.log(error)
-      
+
     }
-    
+
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -32,6 +32,11 @@ const Login: React.FC = () => {
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
+
+      <h2 style={{textAlign:'center' , marginBottom: 40}}>
+          Login for an account
+
+      </h2>
       <Form.Item
         label="Username"
         name="username"
