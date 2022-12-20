@@ -1,10 +1,14 @@
 import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
 import api from '../utils/api';
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Login: React.FC = () => {
   const navi = useNavigate()
+  const location = useLocation()
+  
+  console.log('location', {location})
+
   const onFinish = async (values: any) => {
     console.log('Success:', values);
     try {

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 const Signup = () => {
-
+   
   const layout = {
     labelCol: { span: 8 },
     wrapperCol: { span: 16 },
@@ -26,13 +26,11 @@ const Signup = () => {
 
   const navi = useNavigate()
 
-
-
-
   const onFinish = async (values: any) => {
     try {
       await api.post('/users/register', values)
       console.log('baglantiyok 111')
+      //burada login giderken yeni bir deger verip bu nun yeni olup olladigin abakarixz bir uyari verriz logine gitmeden biye bu react local gelecek login gidereriz
       navi('/login')
       console.log('baglantiyok ')
 
